@@ -1,9 +1,7 @@
-# intro-Rstudio
+# WebinaiR - Rstudio
 
-Webinaire
+Webinaire d'intro à Rstudio et language R
 
 Caroline Patenaude
 
 Automne 2026
-
-Bibliothèque des lettres et sciences humaines
