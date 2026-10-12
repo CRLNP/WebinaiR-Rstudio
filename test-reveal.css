@@ -1,0 +1,76 @@
+#title-slide h3.date::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 375px;
+  margin: 20px auto 0;
+  background-image: url("markdown/ggcats.gif");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+2. Keep your YAML
+
+Make sure the custom template remains removed:
+yaml
+
+---
+title: "My Presentation"
+author: "Your Name"
+output:
+  revealjs::revealjs_presentation:
+    css: test-reveal.css
+    theme: simple
+    transition: fade
+    self_contained: false
+---
+
+3. Knit again
+
+The image should appear below the title, without adding a new slide.
+
+If it still doesn't appear, the title slide's HTML structure may use a different selector. In that case, open the generated HTML, search for class="title, and share the surrounding HTML so I can give you the exact selector for version 0.10.0.
+
+
+
+.flex-container {
+    display: flex;
+}
+
+.flex-child {
+    flex: 1;
+    
+}  
+
+.flex-child:first-child {
+    margin-right: 40px;
+}
+
+.magenta {
+    border-radius: 5px;
+    height: 600px;
+}
+
+.green  {
+    border-radius: 5px;
+    height: 600px;
+    padding: 20px;
+}
+
+.reveal pre code {
+  overflow: visible;
+}
+
+.reveal section {
+
+  font-size: 0.60em !important;
+  text-align: left;
+  line-height: 120% !important
+}
+
+.margin{
+  padding: 20px;
+}
+
+.reveal section img { background:none; border:none; box-shadow:none; }
